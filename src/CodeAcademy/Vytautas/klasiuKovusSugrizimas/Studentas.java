@@ -77,7 +77,7 @@ public class Studentas {
         System.out.println("Studento pazymiu vidurkis " + getVidrukis());
     }
 
-    private double vidurkis() {
+    public double vidurkis() {
         double suma = 0;
         for (int i = 0; i < getPazymiai().length; i++) {
             suma += getPazymiai()[i];

@@ -1,4 +1,4 @@
-package CodeAcademy.Zilvinas.Paskaita8;
+package CodeAcademy.Zilvinas.Paskaita8.Uzduotys5;
 
 import java.util.Scanner;
 

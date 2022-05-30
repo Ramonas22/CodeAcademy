@@ -1,10 +1,10 @@
 package CodeAcademy.Zilvinas.Paskaita14.StaticFinal.Uzduotis7;
 
 public class Tankas {
-    private final String kryptisMas[] = {"SIAURE", "RYTAI", "PIETUS", "VAKARAI"};
+    private final String[] kryptisMas = {"SIAURE", "RYTAI", "PIETUS", "VAKARAI"};
     private String kryptis = "SIAURE";
-    private int koordinates[] = {0, 0, 0, 0};
-    private int suviai[] = {0, 0, 0, 0};
+    private int[] koordinates = {0, 0, 0, 0};
+    private int[] suviai = {0, 0, 0, 0};
 
     public void pirmyn() {
         kryptis = kryptisMas[0];
@@ -28,18 +28,10 @@ public class Tankas {
 
     public void saudyti() {
         switch (kryptis) {
-            case "SIAURE" -> {
-                suviai[0] += 1;
-            }
-            case "RYTAI" -> {
-                suviai[1] += 1;
-            }
-            case "PIETUS" -> {
-                suviai[2] += 1;
-            }
-            case "VAKARAI" -> {
-                suviai[3] += 1;
-            }
+            case "SIAURE" -> suviai[0] += 1;
+            case "RYTAI" -> suviai[1] += 1;
+            case "PIETUS" -> suviai[2] += 1;
+            case "VAKARAI" -> suviai[3] += 1;
         }
     }
 

@@ -15,6 +15,5 @@ public class TestFinal {
         this.antrasKintamasis = antrasKintamasis;
         System.out.println("Pirmas " + this.pirmasKitnamasis);
         System.out.println("Antras " + this.antrasKintamasis);
-
     }
 }

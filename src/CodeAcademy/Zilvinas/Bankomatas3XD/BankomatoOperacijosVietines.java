@@ -271,11 +271,10 @@ public class BankomatoOperacijosVietines {
                     if (arBankomatasPilnas(bankomatas)) {
                         bankomatas.setEur100(bankomatas.getEur100() + banknotuSkaicius);
                         vartotojas.setSaskaita(vartotojas.getSaskaita() + banknotuSkaicius * 100);
-                        pasirinkimas = apklausaInesimui();
                     } else {
                         System.out.println("Bankomate neuztenka vietos tokiam banknotu kiekiui");
-                        pasirinkimas = apklausaInesimui();
                     }
+                    pasirinkimas = apklausaInesimui();
 
                 }
                 case 2 -> {
@@ -284,11 +283,10 @@ public class BankomatoOperacijosVietines {
                     if (arBankomatasPilnas(bankomatas)) {
                         bankomatas.setEur50(bankomatas.getEur50() + banknotuSkaicius);
                         vartotojas.setSaskaita(vartotojas.getSaskaita() + banknotuSkaicius * 50);
-                        pasirinkimas = apklausaInesimui();
                     } else {
                         System.out.println("Bankomate neuztenka vietos tokiam banknotu kiekiui");
-                        pasirinkimas = apklausaInesimui();
                     }
+                    pasirinkimas = apklausaInesimui();
                 }
                 case 3 -> {
                     System.out.println("Kiek kupiuru 20 euru norite inesti: ");
@@ -296,11 +294,10 @@ public class BankomatoOperacijosVietines {
                     if (arBankomatasPilnas(bankomatas)) {
                         bankomatas.setEur20(bankomatas.getEur20() + banknotuSkaicius);
                         vartotojas.setSaskaita(vartotojas.getSaskaita() + banknotuSkaicius * 20);
-                        pasirinkimas = apklausaInesimui();
                     } else {
                         System.out.println("Bankomate neuztenka vietos tokiam banknotu kiekiui");
-                        pasirinkimas = apklausaInesimui();
                     }
+                    pasirinkimas = apklausaInesimui();
                 }
                 case 4 -> {
                     System.out.println("Kiek kupiuru 10 euru norite inesti: ");
@@ -308,11 +305,10 @@ public class BankomatoOperacijosVietines {
                     if (arBankomatasPilnas(bankomatas)) {
                         bankomatas.setEur10(bankomatas.getEur10() + banknotuSkaicius);
                         vartotojas.setSaskaita(vartotojas.getSaskaita() + banknotuSkaicius * 10);
-                        pasirinkimas = apklausaInesimui();
                     } else {
                         System.out.println("Bankomate neuztenka vietos tokiam banknotu kiekiui");
-                        pasirinkimas = apklausaInesimui();
                     }
+                    pasirinkimas = apklausaInesimui();
                 }
                 case 5 -> {
                     System.out.println("Kiek kupiuru 5 euru norite inesti: ");
@@ -320,11 +316,10 @@ public class BankomatoOperacijosVietines {
                     if (arBankomatasPilnas(bankomatas)) {
                         bankomatas.setEur5(bankomatas.getEur5() + banknotuSkaicius);
                         vartotojas.setSaskaita(vartotojas.getSaskaita() + banknotuSkaicius * 5);
-                        pasirinkimas = apklausaInesimui();
                     } else {
                         System.out.println("Bankomate neuztenka vietos tokiam banknotu kiekiui");
-                        pasirinkimas = apklausaInesimui();
                     }
+                    pasirinkimas = apklausaInesimui();
                 }
                 default -> {
                     System.out.println("Ivedete neteisinga skaiciu");

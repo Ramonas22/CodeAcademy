@@ -20,11 +20,14 @@ public class NamuDarbas {
         }
 
         for (int i = 0; i < sarasas.length; i++) {
-            for (int j = 0; j < (sarasas.length - i - 1); j++) {
+            for (int j = 0, enchanted = i; j < (sarasas.length - enchanted - 1); j++) {
                 if (sarasas[j] > sarasas[j + 1]) {
                     laikinas = sarasas[j + 1];
                     sarasas[j + 1] = sarasas[j];
                     sarasas[j] = laikinas;
+                    enchanted = i;
+                }else{
+                    enchanted +=1;
                 }
             }
         }

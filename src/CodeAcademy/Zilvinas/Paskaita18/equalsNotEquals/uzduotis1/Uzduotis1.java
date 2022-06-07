@@ -1,4 +1,4 @@
-package CodeAcademy.Zilvinas.Paskaita18.uzduotis1;
+package CodeAcademy.Zilvinas.Paskaita18.equalsNotEquals.uzduotis1;
 
 class Uzduotis1 {
 

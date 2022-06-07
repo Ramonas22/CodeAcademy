@@ -3,15 +3,16 @@ package CodeAcademy.Vytautas.Paskaita15.Automobilis;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import org.jetbrains.annotations.NotNull;
 
 @Data
 @AllArgsConstructor
-public class Automobilis {
+class Automobilis {
     private String marke;
     private int pagaminimoMetai;
     KebuloTipas kebuloTipas;
 
-    public static Automobilis[] filtruotiPagalKebula(Automobilis[] autoTurgus, KebuloTipas tipas){
+    public static Automobilis @NotNull [] filtruotiPagalKebula(Automobilis[] autoTurgus, KebuloTipas tipas){
         int  counter= 0;
         for (Automobilis auto: autoTurgus
              ) {
@@ -32,7 +33,7 @@ public class Automobilis {
         return atrinktiAuto;
     }
 
-    public static void spausdinkAuto(Automobilis[] sarasas){
+    public static void spausdinkAuto(@NotNull Automobilis[] sarasas){
         for (Automobilis auto: sarasas
              ) {
             System.out.println("Automobilio marke " + auto.getMarke() + " pagaminimo metai " + auto.getPagaminimoMetai()

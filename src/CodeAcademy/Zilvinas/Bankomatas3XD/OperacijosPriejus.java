@@ -39,12 +39,21 @@ public class OperacijosPriejus {
 
     private int pasirinkVartotoja(Vartotojas[] vartotojas){
         Scanner scanner = new Scanner(System.in);
+        int laikinas;
 
-        System.out.println("Pasirinkite vartotoja is sarasao:");
-        for (Vartotojas vartotoja : vartotojas) {
-            System.out.println(vartotoja.getId() + 1);
+        while(true){
+            System.out.println("Pasirinkite vartotoja is sarasao:");
+            for (Vartotojas vartotoja : vartotojas) {
+                System.out.println(vartotoja.getId() + 1);
+            }
+            laikinas = scanner.nextInt();
+            if(laikinas>=0 && laikinas < vartotojas.length){
+                return laikinas;
+            }else {
+                System.out.println("Neteisingas ID");
+            }
         }
-        return scanner.nextInt();
+
     }
 
     private int apklausa(){

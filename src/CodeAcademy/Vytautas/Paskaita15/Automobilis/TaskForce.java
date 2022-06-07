@@ -1,6 +1,6 @@
 package CodeAcademy.Vytautas.Paskaita15.Automobilis;
 
-public class TaskForce {
+class TaskForce {
 
     public static void main(String[] args) {
         Automobilis golf = new Automobilis("WV", 2010 , KebuloTipas.HECHBEKAS);

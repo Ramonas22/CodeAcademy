@@ -1,6 +1,6 @@
 package CodeAcademy.Vytautas.Paskaita15.Darbuotojas;
 
-public class Runeris {
+class Runeris {
 
     public static void main(String[] args) {
         Darbuotojas darbuotojas1 = new Darbuotojas();

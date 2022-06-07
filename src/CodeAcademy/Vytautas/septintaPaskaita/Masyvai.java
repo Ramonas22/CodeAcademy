@@ -2,7 +2,7 @@ package CodeAcademy.Vytautas.septintaPaskaita;
 
 import java.util.*;
 
-public class Masyvai {
+class Masyvai {
 
     public static void main(String[] args) {
 

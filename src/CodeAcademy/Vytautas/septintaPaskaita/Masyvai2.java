@@ -3,7 +3,7 @@ package CodeAcademy.Vytautas.septintaPaskaita;
 import java.util.Random;
 import java.util.Scanner;
 
-public class Masyvai2 {
+class Masyvai2 {
 
     public static void main(String[] args) {
 

@@ -5,7 +5,7 @@ import lombok.Data;
 
 @Data
 @AllArgsConstructor
-public class Darbuotojas {
+class Darbuotojas {
 
     private String vardas;
     private double alga;

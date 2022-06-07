@@ -2,7 +2,7 @@ package CodeAcademy.Vytautas.septintaPaskaita;
 
 import java.util.Scanner;
 
-public class NamuDarbas {
+class NamuDarbas {
 
     public static void main(String[] args) {
         rusiavimas();

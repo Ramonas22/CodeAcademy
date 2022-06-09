@@ -1,6 +1,8 @@
 package CodeAcademy.Vytautas.paskaita20.miniPOS;
 
+import java.math.BigDecimal;
 import java.math.BigInteger;
+import java.math.RoundingMode;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -9,7 +11,7 @@ import java.util.Scanner;
 class Operations {
     static int counter = 0;
 
-    private Receipt createNewReceipt() {
+    private Receipt createNewReceipt(ArrayList<Discount> discounts) {
         Receipt receipt = new Receipt();
         int tempInt = 0, tempInt2 = 0;
         //Pick to add or pass on Receipt type
@@ -42,7 +44,7 @@ class Operations {
         }
         receipt.setReceiptNO("" + counter);
         counter++;
-        run2(receipt);
+        run2(receipt, discounts);
         return receipt;
     }
 
@@ -62,7 +64,7 @@ class Operations {
         return scanner.nextInt();
     }
 
-    private Item createNewItem() {
+    private Item createNewItem(ArrayList<Discount> discounts) {
         Scanner scanner = new Scanner(System.in);
         Item item = new Item();
 
@@ -75,12 +77,22 @@ class Operations {
         System.out.println("Enter item price");
         item.setPrice(scanner.nextBigDecimal());
 
+        for (Discount discountTemp : discounts
+        ) {
+            if (discountTemp.getBarCode().equals(item.getBarCode())
+                    && discountTemp.getActivationDate().isBefore(LocalDateTime.now())
+                    && discountTemp.getEndDate().isAfter(LocalDateTime.now())) {
+                //Should be a simpler way to implement action below
+                item.setPrice(item.getPrice().subtract(item.getPrice().multiply(BigDecimal.valueOf(discountTemp.getDiscountPercent())).divide(BigDecimal.valueOf(100), RoundingMode.UP)));
+            }
+        }
+
         return item;
     }
 
-    private void addItemToReceipt(Receipt receipt) {
+    private void addItemToReceipt(Receipt receipt, ArrayList<Discount> discounts) {
         ArrayList<Item> items = receipt.getItems();
-        items.add(createNewItem());
+        items.add(createNewItem(discounts));
         receipt.setItems(items);
     }
 
@@ -92,18 +104,18 @@ class Operations {
         System.out.println("Enter barcode of item to be removed ");
         barcode = scanner.next();
 
-            for (int i = 0; i < receipt.getItems().size(); i++) {
-                if (receipt.getItems().get(i).getBarCode().equals(barcode)) {
-                    receipt.getItems().remove(i);
-                    pointer = true;
-                    break;
-                }else {
-                    pointer = false;
-                }
+        for (int i = 0; i < receipt.getItems().size(); i++) {
+            if (receipt.getItems().get(i).getBarCode().equals(barcode)) {
+                receipt.getItems().remove(i);
+                pointer = true;
+                break;
+            } else {
+                pointer = false;
             }
-            if(!pointer){
-                System.out.println("Barcode not found in receipt");
-            }
+        }
+        if (!pointer) {
+            System.out.println("Barcode not found in receipt");
+        }
     }
 
     private void addClient(Receipt receipt) {
@@ -168,10 +180,10 @@ class Operations {
         }
         System.out.println("total sum " + receipt.getSum());
 
-        if(receipt.getPaymentStatus() != null){
+        if (receipt.getPaymentStatus() != null) {
             System.out.println("status " + receipt.getPaymentStatus());
         }
-        if(receipt.getPaymentDate()!= null){
+        if (receipt.getPaymentDate() != null) {
             System.out.println("payment date " + receipt.getPaymentDate().format(formatter));
         }
         if (receipt.getClient().getGender() != null) {
@@ -246,12 +258,12 @@ class Operations {
     }
 
     //Second level Run
-    private void run2(Receipt receipt) {
+    private void run2(Receipt receipt, ArrayList<Discount> discounts) {
         int tempInt = 0;
         while (tempInt != 8) {
             tempInt = runInfo2();
             switch (tempInt) {
-                case 1 -> addItemToReceipt(receipt);
+                case 1 -> addItemToReceipt(receipt, discounts);
                 case 2 -> {
                     if (!receipt.getItems().isEmpty()) {
                         removeItem(receipt);
@@ -283,14 +295,15 @@ class Operations {
                     }
                 }
                 case 7 -> showReceiptInfo(receipt);
-                case 8 ->{}
+                case 8 -> {
+                }
                 default -> System.out.println("Entered wrong command try again from the list");
             }
         }
     }
 
     //Initial Run
-    void run1() {
+    void run1(ArrayList<Discount> discounts) {
         int tempInt = 0;
         ArrayList<Receipt> receipts = new ArrayList<>();
 
@@ -298,10 +311,10 @@ class Operations {
         while (tempInt != 3) {
             tempInt = runInfo1();
             switch (tempInt) {
-                case 1 -> receipts.add(createNewReceipt());
+                case 1 -> receipts.add(createNewReceipt(discounts));
                 case 2 -> {
                     if (!receipts.isEmpty()) {
-                        pickReceiptByNO(receipts);
+                        pickReceiptByNO(receipts, discounts);
                     } else {
                         System.out.println("There are no receipt to pick from, Hint create new one first");
                     }
@@ -322,18 +335,18 @@ class Operations {
         return scanner.nextInt();
     }
 
-    private void pickReceiptByNO(ArrayList<Receipt> receipts) {
+    private void pickReceiptByNO(ArrayList<Receipt> receipts, ArrayList<Discount> discounts) {
         int tempInt = 0;
         while (tempInt != receipts.size()) {
             tempInt = showReceiptsNo(receipts);
             for (Receipt receipt : receipts
             ) {
                 if (receipt.getReceiptNO().equals("" + tempInt)) {
-                    run2(receipt);
-                    tempInt=receipts.size();
+                    run2(receipt, discounts);
+                    tempInt = receipts.size();
                 }
             }
-            if(receipts.size() > tempInt && tempInt<0){
+            if (receipts.size() > tempInt && tempInt < 0) {
                 System.out.println("Picked wrong command, try again");
             }
         }

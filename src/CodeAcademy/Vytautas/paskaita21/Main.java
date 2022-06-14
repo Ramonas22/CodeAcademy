@@ -13,8 +13,14 @@ public class Main {
         Person.showAtributes(person1);
         Person.showAtributes(person2);
         */
-        System.out.printf("|%20s|\n|%20s|\n|%20s|\n|%20s|\n|%-20s|", "As", "tikrai", "ismoksiu", "programuoti", "JAVA");
-
+        //System.out.printf("|%20s|\n|%20s|\n|%20s|\n|%20s|\n|%-20s|", "As", "tikrai", "ismoksiu", "programuoti", "JAVA");
+        System.out.printf("""
+                |%20s|
+                |%20S|
+                |%20s|
+                |%20S|
+                |%-20s|
+                """, "As", "tikrai", "ismoksiu", "programuoti", "JAVA");
     }
 
     static boolean anagrama(String word1, String word2) {

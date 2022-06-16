@@ -1,6 +1,6 @@
 package CodeAcademy.Vytautas.klasiuKovos.clock;
 
-public class Clock {
+class Clock {
 
     private int hours;
     private int minutes;

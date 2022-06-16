@@ -2,7 +2,7 @@ package CodeAcademy.Zilvinas.Papildomai.Bankomatas;
 
 import java.util.Scanner;
 
-public class Bankomatas2 {
+class Bankomatas2 {
 
 
     public static void main(String[] args) {
@@ -14,7 +14,7 @@ public class Bankomatas2 {
         parodyk(manoBankomatoSaskaita);
     }
 
-    static class BankomatoSaskaita {
+    private static class BankomatoSaskaita {
         int eur100, eur50, eur20, eur10, eur5;
 
         public int getEur100() {
@@ -66,19 +66,19 @@ public class Bankomatas2 {
         }
     }
 
-    public static void parodyk(BankomatoSaskaita bankomatoSaskaita) {
+    private static void parodyk(BankomatoSaskaita bankomatoSaskaita) {
         System.out.println("100 euru banknotu yra: " + bankomatoSaskaita.getEur100() + "\n50 euru banknotu yra: " + bankomatoSaskaita.getEur50()
                 + "\n20 euru banknotu yra: " + bankomatoSaskaita.getEur20() + "\n10 euru banknotu yra: " + bankomatoSaskaita.getEur10()
                 + "\n5 euru banknotu yra: " + bankomatoSaskaita.getEur5()
                 + "\nVisu banknotu suma = " + suma(bankomatoSaskaita));
     }
 
-    public static int suma(BankomatoSaskaita bankomatoSaskaita) {
+    private static int suma(BankomatoSaskaita bankomatoSaskaita) {
         return bankomatoSaskaita.getEur100() * 100 + bankomatoSaskaita.getEur50() * 50 + bankomatoSaskaita.getEur20() * 20
                 + bankomatoSaskaita.getEur10() * 10 + bankomatoSaskaita.getEur5() * 5;
     }
 
-    static int apklausaInesimui() {
+    private static int apklausaInesimui() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("""
                 Pasirinkite koki veiksma norite atlikti:\s
@@ -91,7 +91,7 @@ public class Bankomatas2 {
         return scanner.nextInt();
     }
 
-    static int apklausaIsemimui() {
+    private static int apklausaIsemimui() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("""
                 Pasirinkite koki veiksma norite atlikti:\s
@@ -104,7 +104,7 @@ public class Bankomatas2 {
         return scanner.nextInt();
     }
 
-    public static void inesti(BankomatoSaskaita bankomatoSaskaita) {
+    private static void inesti(BankomatoSaskaita bankomatoSaskaita) {
         Scanner scanner = new Scanner(System.in);
         int pasirinkimas = apklausaInesimui();
         while (pasirinkimas != 6) {
@@ -142,7 +142,7 @@ public class Bankomatas2 {
         }
     }
 
-    public static void issimimas(BankomatoSaskaita bankomatoSaskaita) {
+    private static void issimimas(BankomatoSaskaita bankomatoSaskaita) {
         Scanner scanner = new Scanner(System.in);
         int pasirinkimas = apklausaIsemimui(), pinigaiIsiemimui;
         while (pasirinkimas != 6) {
@@ -206,7 +206,7 @@ public class Bankomatas2 {
         }
     }
 
-    public static void isimtiMax100e(BankomatoSaskaita bankomatoSaskaita, int pinigai) {
+    private static void isimtiMax100e(BankomatoSaskaita bankomatoSaskaita, int pinigai) {
         int laikinas = 0;
 
         if (suma(bankomatoSaskaita) >= pinigai) {
@@ -250,7 +250,7 @@ public class Bankomatas2 {
         }
     }
 
-    public static void isimtiMax50e(BankomatoSaskaita bankomatoSaskaita, int pinigai) {
+    private static void isimtiMax50e(BankomatoSaskaita bankomatoSaskaita, int pinigai) {
         int laikinas = 0;
 
         if ((suma(bankomatoSaskaita) - bankomatoSaskaita.getEur100() * 100) >= pinigai) {
@@ -287,7 +287,7 @@ public class Bankomatas2 {
         }
     }
 
-    public static void isimtiMax20e(BankomatoSaskaita bankomatoSaskaita, int pinigai) {
+    private static void isimtiMax20e(BankomatoSaskaita bankomatoSaskaita, int pinigai) {
         int laikinas = 0;
 
         if ((suma(bankomatoSaskaita) - bankomatoSaskaita.getEur100() * 100 - bankomatoSaskaita.getEur50() * 50) >= pinigai) {
@@ -317,7 +317,7 @@ public class Bankomatas2 {
         }
     }
 
-    public static void isimtiMax10e(BankomatoSaskaita bankomatoSaskaita, int pinigai) {
+    private static void isimtiMax10e(BankomatoSaskaita bankomatoSaskaita, int pinigai) {
         int laikinas = 0;
 
         if ((suma(bankomatoSaskaita) - bankomatoSaskaita.getEur100() * 100
@@ -341,7 +341,7 @@ public class Bankomatas2 {
         }
     }
 
-    public static void isimtiMax5e(BankomatoSaskaita bankomatoSaskaita, int pinigai) {
+    private static void isimtiMax5e(BankomatoSaskaita bankomatoSaskaita, int pinigai) {
         int laikinas = 0;
 
         if (bankomatoSaskaita.getEur5() * 5 >= pinigai) {

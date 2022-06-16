@@ -14,7 +14,7 @@ import java.util.Scanner;
             3. jusu metodo pavadinias>(tekstas);
         * */
 
-public class Vienas {
+class Vienas {
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
         System.out.println("Iveskite teksta: ");

@@ -2,7 +2,7 @@ package CodeAcademy.Vytautas.klasiuKovos.clock;
 
 import java.util.Scanner;
 
-public class ClockDemo {
+class ClockDemo {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

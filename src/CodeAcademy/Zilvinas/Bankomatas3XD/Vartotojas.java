@@ -1,6 +1,6 @@
 package CodeAcademy.Zilvinas.Bankomatas3XD;
 
-public class Vartotojas {
+class Vartotojas {
 
     private int id;
     private int pin;

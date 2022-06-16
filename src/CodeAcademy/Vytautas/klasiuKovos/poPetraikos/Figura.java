@@ -2,7 +2,7 @@ package CodeAcademy.Vytautas.klasiuKovos.poPetraikos;
 
 import java.util.Scanner;
 
-public class Figura {
+class Figura {
 
     private String pavadinimas;
     private int kampuSkaicius;

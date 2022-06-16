@@ -3,7 +3,7 @@ package CodeAcademy.Vytautas.nebezinau;
 import java.util.Scanner;
 
 
-public class Logika {
+class Logika {
     public static void main(String[] args){
 
         Scanner scanner = new Scanner(System.in);

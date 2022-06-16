@@ -1,6 +1,6 @@
 package CodeAcademy.Zilvinas.Paskaita8;
 
-public class Darbuotojas {
+class Darbuotojas {
 
     private int atlyginimas;
     private int darbas;

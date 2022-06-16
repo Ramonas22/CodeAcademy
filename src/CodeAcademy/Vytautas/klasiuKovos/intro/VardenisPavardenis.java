@@ -3,7 +3,7 @@ package CodeAcademy.Vytautas.klasiuKovos.intro;
 import lombok.Data;
 
 @Data
-public class VardenisPavardenis {
+class VardenisPavardenis {
     private String Vardas;
     private String Pavarde;
     private int amzius;

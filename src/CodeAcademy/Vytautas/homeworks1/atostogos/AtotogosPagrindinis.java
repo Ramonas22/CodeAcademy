@@ -1,6 +1,6 @@
 package CodeAcademy.Vytautas.homeworks1.atostogos;
 
-public class AtotogosPagrindinis {
+class AtotogosPagrindinis {
 
     public static void main(String[] args){
         Atostogos atostogos1 = new Atostogos("Pavasario","Vasaris", 5);

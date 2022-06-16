@@ -1,6 +1,6 @@
 package CodeAcademy.Vytautas.klasiuKovusSugrizimas;
 
-public class Mokykla {
+class Mokykla {
 
     public static void main(String[] args) {
 

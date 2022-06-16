@@ -1,6 +1,6 @@
 package CodeAcademy.Vytautas.klasiuKovos.intro;
 
-public class Figura {
+class Figura {
 
     public Figura(){}
 

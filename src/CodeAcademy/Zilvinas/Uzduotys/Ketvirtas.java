@@ -1,7 +1,7 @@
 package CodeAcademy.Zilvinas.Uzduotys;
 
 
-public class Ketvirtas {
+class Ketvirtas {
     /*
     Klase: Telefonas (Marke, modelis, atmintis, spalva) parodyk();
 

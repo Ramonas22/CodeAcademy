@@ -1,6 +1,6 @@
 package CodeAcademy.Vytautas.homeworks1.atostogos;
 
-public class OperacijosAtostogom {
+class OperacijosAtostogom {
 
     public boolean arTasPatsMenesis(Atostogos atostogos1, Atostogos atostogos2){
         return (atostogos1.getMenesis().equalsIgnoreCase(atostogos2.getMenesis()));

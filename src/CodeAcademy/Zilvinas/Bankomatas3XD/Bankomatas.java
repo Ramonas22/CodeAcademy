@@ -1,6 +1,6 @@
 package CodeAcademy.Zilvinas.Bankomatas3XD;
 
-public class Bankomatas {
+class Bankomatas {
     private int eur100, eur50, eur20, eur10, eur5, kupiuruLimitas;
 
     Bankomatas(){

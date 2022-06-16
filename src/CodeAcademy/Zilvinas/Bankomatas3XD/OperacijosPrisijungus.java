@@ -4,7 +4,7 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.Scanner;
 
-public class OperacijosPrisijungus {
+class OperacijosPrisijungus {
 
     public void screen1(Bankomatas bankomatas, Vartotojas @NotNull [] vartotojai, int ID) {
 

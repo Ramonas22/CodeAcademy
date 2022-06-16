@@ -2,7 +2,7 @@ package CodeAcademy.Vytautas.klasiuKovusSugrizimas;
 
 import java.util.Scanner;
 
-public class KomandosKlasem {
+class KomandosKlasem {
 
     public void rusiuokNuoDidziausioIkiMaziausio(Studentas[] studentai) {
         Studentas studentas = new Studentas();

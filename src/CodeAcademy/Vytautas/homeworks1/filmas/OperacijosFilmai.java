@@ -1,6 +1,6 @@
 package CodeAcademy.Vytautas.homeworks1.filmas;
 
-public class OperacijosFilmai {
+class OperacijosFilmai {
 
     public Filmas geriausiasFilmas(Filmas[] filmai){
         int indeksas=0;

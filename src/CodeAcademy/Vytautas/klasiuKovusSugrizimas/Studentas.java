@@ -5,7 +5,7 @@ import lombok.Data;
 import java.util.Scanner;
 
 @Data
-public class Studentas {
+class Studentas {
 
     private int iq;
     private long asmensKodas;

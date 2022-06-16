@@ -2,7 +2,7 @@ package CodeAcademy.Zilvinas.Papildomai.Saskaita;
 
 import java.util.Scanner;
 
-public class BankoSaskaitos {
+class BankoSaskaitos {
     private static int idCount = 0;
 
     public static void main(String[] args) {
@@ -14,7 +14,7 @@ public class BankoSaskaitos {
     }
 
 
-    static class Saskaita {
+    private static class Saskaita {
         int ID;
         String vardas;
         int suma;
@@ -26,7 +26,7 @@ public class BankoSaskaitos {
         }
     }
 
-    public static void inestiOperacija(Saskaita saskaita) {
+    private static void inestiOperacija(Saskaita saskaita) {
 
         Scanner scanner = new Scanner(System.in);
 
@@ -51,7 +51,7 @@ public class BankoSaskaitos {
 
     }
 
-    public static void issimtiOperacija(Saskaita saskaita) {
+    private static void issimtiOperacija(Saskaita saskaita) {
         Scanner scanner = new Scanner(System.in);
 
         int pasirikimas = apklausaIssimti();
@@ -95,11 +95,11 @@ public class BankoSaskaitos {
         }
     }
 
-    public static void likutis(Saskaita saskaita) {
+    private static void likutis(Saskaita saskaita) {
         System.out.println(saskaita.suma);
     }
 
-    public static int apklausaInesimui() {
+    private static int apklausaInesimui() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("""
                 Iveskite kiek norite inesti:\s
@@ -112,7 +112,7 @@ public class BankoSaskaitos {
         return scanner.nextInt();
     }
 
-    public static int apklausaIssimti() {
+    private static int apklausaIssimti() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("""
                 Iveskite kiek norite inesti:\s
@@ -125,7 +125,7 @@ public class BankoSaskaitos {
         return scanner.nextInt();
     }
 
-    public static int pirmoLygioApklausa() {
+    private static int pirmoLygioApklausa() {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("""
@@ -137,7 +137,7 @@ public class BankoSaskaitos {
         return scanner.nextInt();
     }
 
-    public static int antroLygioApkalusa() {
+    private static int antroLygioApkalusa() {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("""
@@ -150,7 +150,7 @@ public class BankoSaskaitos {
         return scanner.nextInt();
     }
 
-    public static int apklausaPavedimui(int ID, Saskaita[] visosSaskaitos) {
+    private static int apklausaPavedimui(int ID, Saskaita[] visosSaskaitos) {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Kam noreite pervesti pinigu: ");
@@ -158,7 +158,7 @@ public class BankoSaskaitos {
         return scanner.nextInt() - 1;
     }
 
-    public static void varotojuAtvaizdavimas(int ID, Saskaita[] visosSaskaitos) {
+    private static void varotojuAtvaizdavimas(int ID, Saskaita[] visosSaskaitos) {
         for (int i = 0; i < idCount; i++) {
             if (i != ID) {
                 System.out.println(i + 1 + ". " + visosSaskaitos[i].vardas);
@@ -166,13 +166,13 @@ public class BankoSaskaitos {
         }
     }
 
-    public static void varotojuAtvaizdavimas(Saskaita[] visosSaskaitos) {
+    private static void varotojuAtvaizdavimas(Saskaita[] visosSaskaitos) {
         for (int i = 0; i < idCount; i++) {
             System.out.println(i + 1 + ". " + visosSaskaitos[i].vardas);
         }
     }
 
-    public static void sukurtiNaujaVartotoja(Saskaita[] visosSaskaitos) {
+    private static void sukurtiNaujaVartotoja(Saskaita[] visosSaskaitos) {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Iveskite naujo vartotojo varda");
@@ -185,7 +185,7 @@ public class BankoSaskaitos {
         idCount++;
     }
 
-    public static int pasirinktiVartotoja(Saskaita[] visosSaskaitos) {
+    private static int pasirinktiVartotoja(Saskaita[] visosSaskaitos) {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Pasirinkite vartotoja is saraso: ");
@@ -193,7 +193,7 @@ public class BankoSaskaitos {
         return (scanner.nextInt() - 1);
     }
 
-    public static void pavedimas(int vartotojas1, int vartotojas2, Saskaita[] visosSaskaitos) {
+    private static void pavedimas(int vartotojas1, int vartotojas2, Saskaita[] visosSaskaitos) {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Iveskite kiek pinigu norite pervesti: ");
@@ -207,7 +207,7 @@ public class BankoSaskaitos {
 
     }
 
-    public static void pervedimasKitamVartotojui(int ID, Saskaita[] visosSaskaitos) {
+    private static void pervedimasKitamVartotojui(int ID, Saskaita[] visosSaskaitos) {
         int pasirinkimas = apklausaPavedimui(ID, visosSaskaitos);
         if (pasirinkimas > 0 && pasirinkimas <= idCount - 1) {
             pavedimas(ID, pasirinkimas, visosSaskaitos);
@@ -218,7 +218,7 @@ public class BankoSaskaitos {
 
     }
 
-    public static void pirmoLygioMeniu(Saskaita[] saskaitos) {
+    private  static void pirmoLygioMeniu(Saskaita[] saskaitos) {
 
 
         int pasirinkimas = pirmoLygioApklausa();
@@ -245,7 +245,7 @@ public class BankoSaskaitos {
 
     }
 
-    public static void antroLygioMeniu(int vartotojoID, Saskaita[] visosSaskaitos) {
+    private static void antroLygioMeniu(int vartotojoID, Saskaita[] visosSaskaitos) {
 
         Saskaita saskaita = visosSaskaitos[vartotojoID];
         int pasirinkimas = antroLygioApkalusa();

@@ -5,7 +5,7 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.Scanner;
 
-public class BankomatoOperacijosVietines {
+class BankomatoOperacijosVietines {
 
 
     private int visoKupiuru(@NotNull Bankomatas bankomatas) {

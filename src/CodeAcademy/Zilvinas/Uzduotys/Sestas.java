@@ -2,7 +2,7 @@ package CodeAcademy.Zilvinas.Uzduotys;
 
 import java.util.Scanner;
 
-public class Sestas {
+class Sestas {
     /*
     * Klase skaiciuotuvas su metodaus: sudeti, atimti, dauginti, dalinti, dalybosLiekana.
     * Papildomai: padaryti ja itneraktyvia, t.y Kad galima ivewssti skaicius ir pasirinkti koki veiksma atlikti

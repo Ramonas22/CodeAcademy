@@ -2,7 +2,7 @@ package CodeAcademy.Vytautas.nebezinau;
 
 import java.util.Scanner;
 
-public class ConstPi {
+class ConstPi {
     public static final double PI = 3.141592653589793;
 
     public static void main(String[] args) {

@@ -3,7 +3,7 @@ package CodeAcademy.Zilvinas.Paskaita8;
 import java.util.Scanner;
 
 
-public class Pagrindinis {
+class Pagrindinis {
 
 
     public static void main(String[] args) {

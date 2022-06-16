@@ -2,7 +2,7 @@ package CodeAcademy.Zilvinas.Paskaita8.Uzduotys5;
 
 import java.util.Scanner;
 
-public class Task1 {
+class Task1 {
 
     public static void main(String[] args){
         Scanner idomi1 = new Scanner(System.in);

@@ -1,6 +1,6 @@
 package CodeAcademy.Vytautas.klasiuKovos.poPetraikos;
 
-public class executor {
+class executor {
 
     public static void main(String[] args) {
 

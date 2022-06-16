@@ -2,7 +2,7 @@ package CodeAcademy.Vytautas.nebezinau;
 
 import java.util.Scanner;
 
-public class PirmaDalis {
+class PirmaDalis {
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
 

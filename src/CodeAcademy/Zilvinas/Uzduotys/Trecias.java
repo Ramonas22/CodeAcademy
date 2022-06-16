@@ -2,7 +2,7 @@ package CodeAcademy.Zilvinas.Uzduotys;
 
 import java.util.Scanner;
 
-public class Trecias {
+class Trecias {
     public static void main(String[] args){
         /*Parašyti programą, kuri paprašytu įvest 5 kartus skaičių ir išspausdintų jų sumą.
         Pasinaudojant:  Scanner scanner = new Scanner(System.in);

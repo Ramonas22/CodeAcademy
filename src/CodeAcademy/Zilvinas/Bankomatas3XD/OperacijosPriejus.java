@@ -2,7 +2,7 @@ package CodeAcademy.Zilvinas.Bankomatas3XD;
 
 import java.util.Scanner;
 
-public class OperacijosPriejus {
+class OperacijosPriejus {
 
     public void screen0(Bankomatas bankoamtas, Vartotojas[] vartotojas){
         int kintamasis;

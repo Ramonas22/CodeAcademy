@@ -6,7 +6,7 @@ import lombok.Cleanup;
 import java.util.Scanner;
 
 
-public class Pagrindine {
+class Pagrindine {
 
     public static void main(String[] args){
 

@@ -1,6 +1,6 @@
 package CodeAcademy.Vytautas.homeworks1.filmas;
 
-public class ForumCinemas {
+class ForumCinemas {
 
     public static void main(String[] args){
         Filmas filmas1 = new Filmas("Gruozio 13" , "Siaubo" , 5.4);

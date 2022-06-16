@@ -1,7 +1,7 @@
 package CodeAcademy.Vytautas.ArrayList;
 
 
-public class Main {
+class Main {
 
     public static void main(String[] args) {
         /*Integer a1 = new Integer(1);
@@ -48,7 +48,7 @@ public class Main {
         compare(word5,word6);
     }
 
-    static void compare(String variable1, String variable2){
+    private static void compare(String variable1, String variable2){
         System.out.println("Variables have same values " + variable1.equals(variable2));
         System.out.println("Variables refer to same object " + (variable1 == variable2));
     }

@@ -2,7 +2,7 @@ package CodeAcademy.Zilvinas.Paskaita8.Uzduotys5;
 
 import java.util.Scanner;
 
-public class Task2 {
+class Task2 {
 
     public static void main(String[] args) {
         String[] menesiai = {"Sausis", "Vasaris", "Kovas", "Balandis", "Geguze", "Birzelis", "Liepa", "Rugpjutis",

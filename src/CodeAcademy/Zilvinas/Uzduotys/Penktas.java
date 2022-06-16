@@ -2,7 +2,7 @@ package CodeAcademy.Zilvinas.Uzduotys;
 
 import java.util.Scanner;
 
-public class Penktas {
+class Penktas {
     /*
      *Klase: Pinigine
      * Metodai:

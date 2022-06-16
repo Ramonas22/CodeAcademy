@@ -1,7 +1,7 @@
 package CodeAcademy.Zilvinas.Bankomatas3XD;
 
 
-public class Executer {
+class Executer {
 
 
     public static void main(String[] args){

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 class CommandsAndExecution {
-    private  ArrayList<String> strings = new ArrayList<>();
+    private ArrayList<String> strings = new ArrayList<>();
 
     private int commandOptions() {
         Scanner scanner = new Scanner(System.in);
@@ -62,7 +62,7 @@ class CommandsAndExecution {
 
         while (tempInt != 6) {
             tempInt = commandOptions();
-            switch (tempInt){
+            switch (tempInt) {
                 case 1 -> addWord();
                 case 2 -> findWord();
                 case 3 -> deleteWord();

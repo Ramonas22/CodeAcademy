@@ -12,32 +12,44 @@ class Task3 {
         coordinatesArrayList.add(new Coordinates(0, 0));
         coordinatesArrayList.add(new Coordinates(9, 1));
 
-        for (Coordinates cordinates : coordinatesArrayList
-        ) {
-            System.out.printf("(%d:%d)", cordinates.getX(), cordinates.getY());
-        }
+        printInfo(coordinatesArrayList);
 
-        int counter = 0;
-        for (Coordinates cordinates : coordinatesArrayList
+        findCoordinate(coordinatesArrayList, 0, 0);
+
+        printInfo(coordinatesArrayList);
+    }
+
+    static void printInfo(ArrayList<Coordinates> coordinatesArrayList) {
+        for (Coordinates coordinates : coordinatesArrayList
         ) {
-            if (cordinates.getX() == 0 && cordinates.getY() == 0) {
+            System.out.printf("(%d:%d)", coordinates.getX(), coordinates.getY());
+        }
+    }
+
+    static void findCoordinate(ArrayList<Coordinates> coordinatesArrayList, Integer x, Integer y) {
+        int counter = 0;
+        for (Coordinates coordinates : coordinatesArrayList
+        ) {
+            if (coordinates.getX() == x && coordinates.getY() == y) {
                 break;
             } else {
                 counter++;
             }
         }
-        if(counter>=coordinatesArrayList.size()){
-            System.out.println("\n\nCannot change 0:0 coordinate to 1:1 since it is not inside list\n");
-        }else {
-            System.out.println("\n\nCoodinate 0:0 index in list is " + counter + "\n");
+
+        if (counter >= coordinatesArrayList.size()) {
+            System.out.println("\n\nCannot change " + x + ":" + y + " coordinate to 1:1 since it is not inside list\n");
+        } else {
+            //Show coordinate index
+            System.out.println("\n\nCoordinate " + x + ":" + y + " index in list is " + counter + "\n");
+
+            //Swap chosen coordinate to 1 1
             coordinatesArrayList.get(counter).setX(1);
             coordinatesArrayList.get(counter).setY(1);
-            System.out.println("Coordinate 0:0 swapted to 1:1\n");
-        }
-        for (Coordinates cordinates : coordinatesArrayList
-        ) {
-            System.out.printf("(%d:%d)", cordinates.getX(), cordinates.getY());
+            System.out.println("Coordinate " + x + ":" + y + " swapped to 1:1\n");
         }
     }
+
+
 }
 

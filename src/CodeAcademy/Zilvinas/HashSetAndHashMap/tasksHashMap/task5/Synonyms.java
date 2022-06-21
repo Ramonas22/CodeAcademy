@@ -1,4 +1,4 @@
-package CodeAcademy.Zilvinas.HashSetAndHashMap.tasksHashMap.Task5;
+package CodeAcademy.Zilvinas.HashSetAndHashMap.tasksHashMap.task5;
 
 import java.util.*;
 

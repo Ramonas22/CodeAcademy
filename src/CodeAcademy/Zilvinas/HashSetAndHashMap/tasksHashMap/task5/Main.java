@@ -1,4 +1,4 @@
-package CodeAcademy.Zilvinas.HashSetAndHashMap.tasksHashMap.Task5;
+package CodeAcademy.Zilvinas.HashSetAndHashMap.tasksHashMap.task5;
 
 class Main {
     public static void main(String[] args) {
